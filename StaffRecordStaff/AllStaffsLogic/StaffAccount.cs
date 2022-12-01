@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StaffRecordStaff
 {
-    public class AllStaffs
+    public class StaffAccount
     {
         public int ID { get; set; }
         public string Name { get; set; }

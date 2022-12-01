@@ -43,17 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllStaffs.cs" />
-    <Compile Include="Login.cs" />
-    <Compile Include="Non-AcademicStaffs.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="AllStaffsLogic\AcademicStaff.cs" />
+    <Compile Include="AllStaffsLogic\StaffDivision\Exam Officer.cs" />
+    <Compile Include="AllStaffsLogic\StaffDivision\IAdmin.cs" />
+    <Compile Include="AllStaffsLogic\StaffDivision\Principal.cs" />
+    <Compile Include="AllStaffsLogic\StaffDivision\Teacher.cs" />
+    <Compile Include="APP\Program.cs" />
+    <Compile Include="ID.cs" />
+    <Compile Include="AllStaffsLogic\Non-AcademicStaff.cs" />
+    <Compile Include="AllStaffsLogic\StaffAccount.cs" />
+    <Compile Include="InputLogic\UserLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AcademicStaffs.cs" />
-    <Compile Include="UserInputs.cs" />
-    <Compile Include="Validate.cs" />
+    <Compile Include="InputLogic\UserInputs.cs" />
+    <Compile Include="InputLogic\Validate.cs" />
+    <Compile Include="WelcomeLogic\Greet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

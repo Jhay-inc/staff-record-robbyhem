@@ -3,14 +3,56 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace StaffRecordStaff
 {
-    public class UserInputs
+    public static class UserInput
     {
-        public void Register()
+        public static void ClickEnterToContinue()
+        {
+            Console.WriteLine("Click \"enter\" to continue");
+            Console.ReadKey();
+            //Console.Clear();
+        }
+
+        public static string GetSecretPassword(string prompt)
+        {
+            bool isPrompt = true;
+            string asterics = "";
+
+            StringBuilder inpuut = new StringBuilder();
+
+            while (true)
+            {
+                if (isPrompt)
+                    Console.WriteLine(prompt);
+                ConsoleKeyInfo inputKey = Console.ReadKey(true);
+
+            }
+}
+
+
+        //public static void PrintMessage(string message, bool success = true)
+        //{
+        //    if (success)
+        //    {
+        //        Console.ForegroundColor = ConsoleColor.Yellow;
+        //    }
+        //    else
+        //    {
+        //        Console.ForegroundColor= ConsoleColor.Red;
+        //    }
+            
+        //    Console.WriteLine(message);
+        //    Console.ResetColor();
+        //    ClickEnterToContinue();
+        //}
+
+
+        public static void GetDetails()
         {
             Console.Write("First Name: ");
             string firstName = Console.ReadLine();
@@ -18,12 +60,12 @@ namespace StaffRecordStaff
             while (!Validate.IsValidName(firstName))
             {
                 Console.Clear();
-                Console.Write("Invalid Entry, Name must begin with capital letters! \n First Name: ");
+                Console.Write("Invalid Entry, Name must begin with capital letters! \nLast Name: ");
                 firstName = Console.ReadLine();
             }
 
             Console.WriteLine();
-
+            
             Console.Write("Last Name: ");
             string lastName = Console.ReadLine();
 
@@ -49,7 +91,22 @@ namespace StaffRecordStaff
             Console.WriteLine();
 
             Console.Write("Password: ");
+            SecureString pass = new SecureString();
+            ConsoleKeyInfo keyInfo;
+            
+
+            do
+            {
+                keyInfo = Console.ReadKey(true);
+                if (!char.IsControl(keyInfo.KeyChar))
+                {
+                    pass.AppendChar(keyInfo.KeyChar);
+                    Console.Write("*");
+                }
+            }
+            while (keyInfo.Key != ConsoleKey.Enter);
             string password = Console.ReadLine();
+
 
             while (!Validate.IsValidPassword(password))
             {
@@ -96,5 +153,10 @@ namespace StaffRecordStaff
 
 
         }
+
+        //private static SecureString  MaskPassword()
+        //{
+            
+        //}
     }
 }

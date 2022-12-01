@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StaffRecordStaff
+namespace StaffRecordStaff.AllStaffsLogic.StaffDivision
 {
-    internal class Non_AcademyStaffs
+    public class Principal : IAdmin
     {
     }
 }

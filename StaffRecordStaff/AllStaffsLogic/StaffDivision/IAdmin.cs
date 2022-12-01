@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StaffRecordStaff
+namespace StaffRecordStaff.AllStaffsLogic.StaffDivision
 {
-    public class AcademicStaffs
+    public interface IAdmin
     {
+
     }
 }
