@@ -35,21 +35,7 @@ namespace StaffRecordStaff
 }
 
 
-        //public static void PrintMessage(string message, bool success = true)
-        //{
-        //    if (success)
-        //    {
-        //        Console.ForegroundColor = ConsoleColor.Yellow;
-        //    }
-        //    else
-        //    {
-        //        Console.ForegroundColor= ConsoleColor.Red;
-        //    }
-            
-        //    Console.WriteLine(message);
-        //    Console.ResetColor();
-        //    ClickEnterToContinue();
-        //}
+        
 
 
         public static void GetDetails()
@@ -143,20 +129,8 @@ namespace StaffRecordStaff
                 Console.WriteLine("you entered an invalid date");
                 Console.WriteLine();
             }
-
-            //while (!Validate.IsValidName(date))
-            //{
-            //    Console.Clear();
-            //    Console.Write("Invalid Entry, Date must begin with capital letters! \n Department: ");
-            //    department = Console.ReadLine();
-            //}
-
-
         }
 
-        //private static SecureString  MaskPassword()
-        //{
-            
-        //}
+        
     }
 }
