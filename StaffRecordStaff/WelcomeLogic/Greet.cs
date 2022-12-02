@@ -14,7 +14,7 @@ namespace StaffRecordStaff.WelcomeLogic
         {
             Console.Title = "STAFF RECORD";
 
-            Console.WriteLine("----------------------------Welcome To Robby School Staff Records----------------------------");
+            Console.WriteLine("===><===><===><===><===><===><===Welcome To Robby School Staff Records===><===><===><===><===><===><===");
             
             UserInput.ClickEnterToContinue();
         }

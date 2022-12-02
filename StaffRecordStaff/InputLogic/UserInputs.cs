@@ -11,31 +11,33 @@ namespace StaffRecordStaff
 {
     public static class UserInput
     {
+        //This method is the click function
         public static void ClickEnterToContinue()
         {
             Console.WriteLine("Click \"enter\" to continue");
             Console.ReadKey();
-            //Console.Clear();
         }
 
-        public static string GetSecretPassword(string prompt)
-        {
-            bool isPrompt = true;
-            string asterics = "";
 
-            StringBuilder inpuut = new StringBuilder();
+        //public static SecureString EncryptPassword()
+        //{
+        //    Console.Write("Password: ");
+        //    SecureString pass = new SecureString();
+        //    ConsoleKeyInfo keyInfo;
 
-            while (true)
-            {
-                if (isPrompt)
-                    Console.WriteLine(prompt);
-                ConsoleKeyInfo inputKey = Console.ReadKey(true);
+        //    do
+        //    {
+        //        keyInfo = Console.ReadKey(true);
+        //        if (!char.IsControl(keyInfo.KeyChar))
+        //        {
+        //            pass.AppendChar(keyInfo.KeyChar);
+        //            Console.Write("*");
+        //        }
+        //    }
+        //    while (keyInfo.Key != ConsoleKey.Enter);
 
-            }
-}
-
-
-        
+        //    return pass;
+        //}
 
 
         public static void GetDetails()
@@ -79,7 +81,6 @@ namespace StaffRecordStaff
             Console.Write("Password: ");
             SecureString pass = new SecureString();
             ConsoleKeyInfo keyInfo;
-            
 
             do
             {
@@ -88,19 +89,23 @@ namespace StaffRecordStaff
                 {
                     pass.AppendChar(keyInfo.KeyChar);
                     Console.Write("*");
+                    
                 }
             }
             while (keyInfo.Key != ConsoleKey.Enter);
             string password = Console.ReadLine();
 
+            //EncryptPassword();
 
-            while (!Validate.IsValidPassword(password))
-            {
-                Console.Clear();
-                Console.Write("Password should contain minimum of 6 alphanumeric and special characters! \n Password? ");
-                password = Console.ReadLine();
-            }
+            //while (!Validate.IsValidPassword(password))
+            //{
+            //    Console.Clear();
+            //    Console.Write("Password should contain minimum of 6 alphanumeric and special characters! \n Password? ");
+            //    password = Console.ReadLine();
+            //    //EncryptPassword();
+            //}
 
+            Console.WriteLine();
             Console.WriteLine();
 
             Console.Write("Department: ");

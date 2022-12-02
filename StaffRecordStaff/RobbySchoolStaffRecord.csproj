@@ -48,7 +48,7 @@
     <Compile Include="AllStaffsLogic\StaffDivision\IAdmin.cs" />
     <Compile Include="AllStaffsLogic\StaffDivision\Principal.cs" />
     <Compile Include="AllStaffsLogic\StaffDivision\Teacher.cs" />
-    <Compile Include="APP\Program.cs" />
+    <Compile Include="WelcomeLogic\Program.cs" />
     <Compile Include="ID.cs" />
     <Compile Include="AllStaffsLogic\Non-AcademicStaff.cs" />
     <Compile Include="AllStaffsLogic\StaffAccount.cs" />
@@ -61,6 +61,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="APP\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
