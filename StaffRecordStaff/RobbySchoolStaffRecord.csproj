@@ -43,26 +43,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllStaffsLogic\AcademicStaff.cs" />
-    <Compile Include="AllStaffsLogic\StaffDivision\Exam Officer.cs" />
-    <Compile Include="AllStaffsLogic\StaffDivision\IAdmin.cs" />
-    <Compile Include="AllStaffsLogic\StaffDivision\Principal.cs" />
-    <Compile Include="AllStaffsLogic\StaffDivision\Teacher.cs" />
-    <Compile Include="WelcomeLogic\Program.cs" />
+    <Compile Include="Model\AcademicStaff.cs" />
+    <Compile Include="Model\StaffDivision\Exam Officer.cs" />
+    <Compile Include="Model\StaffDivision\IAdmin.cs" />
+    <Compile Include="Model\StaffDivision\Principal.cs" />
+    <Compile Include="Model\StaffDivision\Teacher.cs" />
+    <Compile Include="UI\Program.cs" />
     <Compile Include="ID.cs" />
-    <Compile Include="AllStaffsLogic\Non-AcademicStaff.cs" />
-    <Compile Include="AllStaffsLogic\StaffAccount.cs" />
-    <Compile Include="InputLogic\UserLogin.cs" />
+    <Compile Include="Model\Non-AcademicStaff.cs" />
+    <Compile Include="Model\StaffAccount.cs" />
+    <Compile Include="UI\UserLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="InputLogic\UserInputs.cs" />
-    <Compile Include="InputLogic\Validate.cs" />
-    <Compile Include="WelcomeLogic\Greet.cs" />
+    <Compile Include="UI\UserInputs.cs" />
+    <Compile Include="UI\Validate.cs" />
+    <Compile Include="UI\Greet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="APP\" />
+    <Folder Include="Database\" />
+    <Folder Include="Logic\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

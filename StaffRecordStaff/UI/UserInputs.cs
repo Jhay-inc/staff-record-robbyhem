@@ -11,6 +11,8 @@ namespace StaffRecordStaff
 {
     public static class UserInput
     {
+        private static string pass;
+
         //This method is the click function
         public static void ClickEnterToContinue()
         {
@@ -89,11 +91,12 @@ namespace StaffRecordStaff
                 {
                     pass.AppendChar(keyInfo.KeyChar);
                     Console.Write("*");
-                    
+
                 }
             }
             while (keyInfo.Key != ConsoleKey.Enter);
             string password = Console.ReadLine();
+
 
             //EncryptPassword();
 
